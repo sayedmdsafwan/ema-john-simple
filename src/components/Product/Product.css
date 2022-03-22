@@ -1,0 +1,39 @@
+.product {
+    min-height: 550px;
+    position: relative;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.product img {
+    width: 100%;
+    height: 286px;
+}
+
+.inner-div {
+    padding: 10px;
+}
+
+.inner-div h3 {
+    margin-bottom: -10px;
+}
+
+.product .button {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+.product button {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 13px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product button:hover {
+    background-color: bisque;
+}
