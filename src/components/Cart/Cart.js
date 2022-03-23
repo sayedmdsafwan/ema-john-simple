@@ -23,12 +23,6 @@ const Cart = ({ cart }) => {
             <p>Total Shipping Charge: ${shipping}</p>
             <p>Tax: ${tax}</p>
             <h4>Grand Total: ${grandTotal}</h4>
-            <button className="clear-cart">
-                Clear Cart <FontAwesomeIcon icon={faBucket} />
-            </button>
-            <button className="review-order">
-                Review Order <FontAwesomeIcon icon={faArrowRight} />
-            </button>
         </div>
     );
 };

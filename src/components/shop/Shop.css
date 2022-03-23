@@ -19,33 +19,6 @@
     top: 0;
 }
 
-.clear-cart,
-.review-order {
-    width: 100%;
-    padding: 13px;
-    margin-bottom: 10px;
-    border: 0;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.clear-cart {
-    background-color: #ff3030;
-    color: aliceblue;
-}
-
-.clear-cart:hover {
-    background-color: #e25923;
-}
-
-.review-order {
-    background-color: #ff9900;
-    color: aliceblue;
-}
-
-.review-order:hover {
-    background-color: #ffa600;
-}
-
 @media screen and (max-width: 1100px) {
     .products-container {
         grid-template-columns: repeat(2, 1fr);
