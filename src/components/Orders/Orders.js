@@ -32,7 +32,14 @@ const Orders = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                    <button onClick={() => navigate("/shipment")}>
+                    <button
+                        style={{
+                            padding: "10px 30px",
+                            margin: "0",
+                        }}
+                        className="btn-default-style"
+                        onClick={() => navigate("/shipment")}
+                    >
                         Proceed to checkout
                     </button>
                 </Cart>

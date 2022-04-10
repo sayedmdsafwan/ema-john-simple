@@ -10,4 +10,15 @@
 8. user redirection from react-router by "RequiredAuth"
 9. create RequiredAuth components and connect it through from-location
 
+
+***************
+Firebase hosting:
+1. npm install -g firebase-tools (one time for each pc)
+2. firebase login (one time for each pc)
+3. firebase init (one time for each project)
+4. npm run build (build your project) (every time for each project)
+5. firebase deploy
+
+
+
 */

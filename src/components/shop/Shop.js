@@ -57,7 +57,15 @@ const Shop = () => {
             <div className="cart-container">
                 <Cart cart={cart}>
                     <Link to="/orders">
-                        <button>Review Order</button>
+                        <button
+                            style={{
+                                padding: "10px 40px",
+                                margin: "0",
+                            }}
+                            className="btn-default-style"
+                        >
+                            Review Order
+                        </button>
                     </Link>
                 </Cart>
             </div>

@@ -19,7 +19,12 @@ const Header = () => {
                     <Link to="/inventory">Inventory</Link>
                     <Link to="/about">About</Link>
                     {user ? (
-                        <button onClick={() => signOut(auth)}>Sign Out</button>
+                        <button
+                            className="btn-default-style"
+                            onClick={() => signOut(auth)}
+                        >
+                            Sign Out
+                        </button>
                     ) : (
                         <Link to="/login">Login</Link>
                     )}
