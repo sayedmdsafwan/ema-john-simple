@@ -13,9 +13,9 @@ const Orders = () => {
 
     const handleRemoveFromCart = (product) => {
         console.log(product);
-        const rest = cart.filter((pd) => pd.id !== product.id);
+        const rest = cart.filter((pd) => pd._id !== product._id);
         setCart(rest);
-        removeFromDb(product.id);
+        removeFromDb(product._id);
     };
 
     const navigate = useNavigate();
@@ -26,7 +26,7 @@ const Orders = () => {
                     <ReviewItem
                         handleRemoveFromCart={handleRemoveFromCart}
                         product={product}
-                        key={product.id}
+                        key={product._id}
                     />
                 ))}
             </div>

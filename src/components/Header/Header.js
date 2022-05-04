@@ -12,7 +12,9 @@ const Header = () => {
     return (
         <div>
             <nav className="header">
-                <img src={logo} alt="Logo" />
+                <Link to="/">
+                    <img src={logo} alt="Logo" />
+                </Link>
                 <div>
                     <Link to="/">Shop</Link>
                     <Link to="/orders">Orders</Link>
