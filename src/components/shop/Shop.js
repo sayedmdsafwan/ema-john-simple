@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import useProducts from "../../hooks/useProducts";
 import { addToDb, getStoredCart } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import "./Shop.css";
 
 const Shop = () => {
-    const [products] = useProducts();
     const [cart, setCart] = useState([]);
     const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+    const [size, setSize] = useState(12);
+
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch(`http://localhost:4000/product?page=${page}&size=${size}`)
+            .then((res) => res.json())
+            .then((data) => setProducts(data));
+    }, [page, size]);
 
     useEffect(() => {
         fetch("http://localhost:4000/productCount")
@@ -68,8 +75,22 @@ const Shop = () => {
                 </div>
                 <div className="pagination">
                     {[...Array(pageCount).keys()].map((number) => (
-                        <button>{number + 1}</button>
+                        <button
+                            key={number}
+                            className={page === number ? "selected" : ""}
+                            onClick={() => setPage(number)}
+                        >
+                            {number + 1}
+                        </button>
                     ))}
+                    <select onChange={(e) => setSize(e.target.value)}>
+                        <option value="6">6</option>
+                        <option value="12" selected>
+                            12
+                        </option>
+                        <option value="18">18</option>
+                        <option value="24">24</option>
+                    </select>
                 </div>
             </div>
             <div className="cart-container">

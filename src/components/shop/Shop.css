@@ -35,7 +35,8 @@
     border-radius: 3px;
 }
 
-.pagination button:hover {
+.pagination button:hover,
+.pagination .selected {
     background-color: coral;
 }
 
